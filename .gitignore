@@ -1,0 +1,27 @@
+# --- Build output ---
+build*/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+
+# --- Third-party dependencies ---
+# glfw / glm / imgui / glad / stb are vendored by the course distribution.
+# Not redistributed here; see "Building" in README.md.
+external/
+
+# --- Course-provided reference binaries (not my work) ---
+sample_solution/
+
+# --- Runtime-generated config ---
+imgui.ini
+gloo.cfg
+
+# --- Editor / OS cruft ---
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*~
+
+# --- Original course submission form (superseded by README.md) ---
+README.txt
