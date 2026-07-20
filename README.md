@@ -2,9 +2,7 @@
 
 An interactive skeletal animation viewer in C++ / OpenGL. It loads a hierarchical
 joint skeleton and a triangle mesh, binds them together with per-vertex attachment
-weights, and deforms the mesh in real time as the skeleton is posed — the technique
-variously called *skeletal subspace deformation*, *linear blend skinning*, or
-*enveloping*.
+weights, and deforms the mesh in real time as the skeleton is posed.
 
 Eighteen joints are exposed as Euler-angle sliders. Dragging one re-poses the
 skeleton and re-skins the mesh every frame.
