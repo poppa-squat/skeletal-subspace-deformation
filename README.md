@@ -12,8 +12,7 @@ skeleton and re-skins the mesh every frame.
 ## Attribution
 
 **This project began as coursework.** The application framework, build system,
-and model assets were provided to me; I did not write them. Being precise about
-the split, since it matters:
+and model assets were provided to me
 
 | | |
 |---|---|
