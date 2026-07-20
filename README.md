@@ -20,13 +20,6 @@ the split, since it matters:
 | **Written by me** | `assignment_code/assignment2/SkeletonNode.cpp` · `SkeletonNode.hpp`<br>`gloo/Transform.cpp` — the `GetLocalToAncestorMatrix` and `GetLocalToWorldMatrix` methods |
 | **Provided to me** | `gloo/` — the "GLOO" rendering framework (scene graph, renderer, shaders, camera, mesh/OBJ loading, ImGui integration)<br>`assignment_code/assignment2/main.cpp` and `SkeletonViewerApp.cpp` — application scaffolding and slider UI<br>`assets/` — the `.obj` / `.skel` / `.attach` model data<br>`CMakeLists.txt` — the build system |
 
-So: the skeleton parsing, the skinning math, the normal recomputation, and the
-scene-graph transform composition are mine. The window, the renderer, the shaders,
-and the models are not.
-
-The provided framework carries no license or copyright header, and is reproduced
-here only as the context needed to make my own code readable and runnable.
-
 ---
 
 ## Implementation notes
@@ -53,16 +46,16 @@ p' = Σ_j  w_j · (T_j · B_j⁻¹) · p
 ## Repository layout
 
 ```
-assignment_code/assignment2/   Skeleton loading, skinning, normals  [mine]
-gloo/                          Rendering framework                  [provided]
-assets/assignment2/            Model data: .obj / .skel / .attach   [provided]
-CMakeLists.txt                 Build system                         [provided]
+assignment_code/assignment2/   Skeleton loading, skinning, normals
+gloo/                          Rendering framework
+assets/assignment2/            Model data: .obj / .skel / .attach
+CMakeLists.txt                 Build system
 ```
 
 ### File formats
 
 `.skel` — one joint per line, `x y z parent_index`. Position is relative to the
-parent; `parent_index` refers to an earlier line, and `-1` marks the root.
+parent; `parent_index` refers to an earlier line, `-1` marks the root.
 
 `.attach` — one line per mesh vertex, holding that vertex's attachment weights to
 each non-root joint. For an 18-joint skeleton each row carries 17 weights.
@@ -73,7 +66,7 @@ each non-root joint. For an 18-joint skeleton each row carries 17 weights.
 
 **This repository contains source only — it will not build as-is.** The
 dependencies and the reference binaries are deliberately not redistributed here.
-To build it you need `external/src/` populated with:
+To build it you need `external/src/` with:
 
 | Dependency | Version |
 |---|---|
